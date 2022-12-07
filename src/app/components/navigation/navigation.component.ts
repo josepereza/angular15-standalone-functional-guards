@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { DomainService } from 'src/app/domain.service';
 
 @Component({
   selector: 'app-navigation',
@@ -10,5 +11,8 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-
+  service = inject(DomainService)
+logout(){
+this.service.authenticated=false
+}
 }

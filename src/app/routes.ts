@@ -22,6 +22,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
   },
   {
+    path: 'register',
+    loadComponent: () => import('./pages/register/register.component').then(m => m.RegisterComponent)
+  },
+  {
     path: 'no-available',
     loadComponent: () => import('./pages/noavaliable/noavaliable.component').then(m => m.NoavaliableComponent)
   }
